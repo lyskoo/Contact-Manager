@@ -18,7 +18,7 @@ public class ContactsController : ControllerBase
     [HttpPost("upload")]
     public async Task<IActionResult> UploadCsv(IFormFile file)
     {
-        if (!Validation.IsFileNotEmpty(file) || Validation.IsFileCsvFormat(file))
+        if (!Validation.IsFileNotEmpty(file) || !Validation.IsFileCsvFormat(file))
         {
             return BadRequest("Invalid file. Please choose a non-empty CSV file.");
         }

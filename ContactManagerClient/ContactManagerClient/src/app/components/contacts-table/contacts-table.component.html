@@ -1,0 +1,20 @@
+<table class="contacts-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Married</th>
+        <th>Phone</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.dateOfBirth }}</td>
+        <td>{{ contact.married ? 'Yes' : 'No' }}</td>
+        <td>{{ contact.phone }}</td>
+        <td>{{ contact.salary }}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,19 @@
+<div class="content">
+    <div class="header">
+        <h1>Contacts</h1>
+        <div class="right-side">
+            <div class="btn">
+                <input type="file" #fileInput style="display: none" (change)="onFileSelected($event)">
+                <button mat-button (click)="fileInput.click()">Upload file</button>
+            </div>
+            <div class="sort">
+                <h5>Sort by</h5>
+              <select class="form-select" (change)="onSortSelected($event)">
+                <option *ngFor="let option of sortOptions" [value]="option.value">{{option.name}}</option>
+              </select>
+            </div>
+        </div>
+    </div>
+    
+    <app-contacts-table [contacts]="contacts"></app-contacts-table>    
+</div>
